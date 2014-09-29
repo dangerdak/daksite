@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %} {% endblock title %} | </title>
+    <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+		{% block extrahead %}{% endblock extrahead %}
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href={% url 'post_list' %}>
+							Blog
+						</a>
+					</li>
+					<li>
+						<a href={% url 'about' %}>
+							About
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/dangerdak">
+							Github
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<aside>
+		</aside>
+
+		<div class="main-content">
+			{% block main_content %}
+			{% endblock main_content %}
+		</div>
+
+		<div class="contact">
+			dakshina{dot}scott{at}gmail{dot}com
+		</div>
+	
+	{% block extrajs %}{% endblock extrajs %}
+	</body>
+</html>
+

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load markdown_deux_tags %}
+
+
+{% block title %}
+	{{ flatpage.title }}
+{% endblock title %}
+
+{% block main_content %}
+	{{ flatpage.content|markdown }}
+{% endblock main_content %}
