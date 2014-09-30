@@ -3,9 +3,12 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+from blog.views import PostListView
+
 urlpatterns = patterns('',
-    url(r'^blog/',
-        include('blog.urls')),
+    url(r'^$',
+        PostListView.as_view(),
+        name='post_list'),
 
     url(r'^admin/',
         include(admin.site.urls)),

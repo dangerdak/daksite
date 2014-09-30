@@ -5,30 +5,35 @@
 		<meta charset="utf-8">
 		<title>{% block title %} {% endblock title %} | </title>
     <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
-    <link href="{% static 'blog/style.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
 		{% block extrahead %}{% endblock extrahead %}
 	</head>
 
 	<body>
 		<header>
-			<div class="logo">
-			</div>
+			<p class="logo">
+				dakshina scott
+			</p>
 			<nav>
 				<ul>
 					<li>
 						<a href={% url 'post_list' %}>
-							Blog
+							blog
+						</a>
+					</li>
+					<li>
+						<a href={% url 'post_list' %}>
+							projects
 						</a>
 					</li>
 					<li>
 						<a href={% url 'about' %}>
-							About
+							about
 						</a>
 					</li>
 					<li>
 						<a href="https://github.com/dangerdak">
-							Github
+							github
 						</a>
 					</li>
 				</ul>
