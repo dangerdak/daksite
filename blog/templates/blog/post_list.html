@@ -5,14 +5,10 @@
 {% block page_title %}blog{% endblock page_title %}
 
 {% block content %}
-<div class="stub">
-	<ul>
 		{% for post in post_list %}
-		<li>
-			<h2>{{ post.title }}</h2>
-			{{ post.body|markdown }}
-		</li>
+		<div class="stub">
+				<h2>{{ post.title }}</h2>
+				{{ post.body|markdown }}
+		</div>
 		{% endfor %}
-	</ul>
-</div>
 {% endblock content %}
