@@ -97,15 +97,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 STATIC_URL = '/static/'
-STATIC_FILE_DIRS = (
-    '/home/dangerdak/projects/daksite/static',
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATIC_FILES_FINDERS = (
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
 SITE_ID = 2
