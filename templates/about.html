@@ -6,6 +6,8 @@
 	{{ flatpage.title }}
 {% endblock title %}
 
-{% block main_content %}
+{% block page_title %}about{% endblock page_title %}
+
+{% block content %}
 	{{ flatpage.content|markdown }}
-{% endblock main_content %}
+{% endblock content %}

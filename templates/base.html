@@ -6,13 +6,14 @@
 		<title>{% block title %} {% endblock title %} | </title>
     <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 		{% block extrahead %}{% endblock extrahead %}
 	</head>
 
 	<body>
+		<div class="container">
 		<header>
 			<p class="logo">
-				dakshina scott
 			</p>
 			<nav>
 				<ul>
@@ -43,15 +44,17 @@
 		<aside>
 		</aside>
 
-		<div class="main-content">
-			{% block main_content %}
-			{% endblock main_content %}
+		<h1>{% block page_title %}{% endblock page_title %}</h1>
+		<div class="content">
+			{% block content %}
+			{% endblock content %}
 		</div>
 
-		<div class="contact">
+		<footer>
 			dakshina{dot}scott{at}gmail{dot}com
-		</div>
+		</footer>
 	
+	</div>
 	{% block extrajs %}{% endblock extrajs %}
 	</body>
 </html>
