@@ -32,3 +32,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Image(models.Model):
+    title = models.CharField(max_length=50)
+    caption = models.TextField(max_length=200, blank=True)
+    image = models.ImageField(upload_to='images/%Y')
+    post = models.ForeignKey('Post')
+    date_uploaded = models.DateTimeField(auto_now_add=True)

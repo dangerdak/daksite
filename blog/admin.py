@@ -1,9 +1,13 @@
 from django.contrib import admin
 from django.db import models
 
-from blog.models import Post, Category
+from blog.models import Post, Category, Image
 
 from pagedown.widgets import AdminPagedownWidget
+
+
+class ImageInline(admin.StackedInline):
+    model = Image
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -14,6 +18,10 @@ class PostAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': AdminPagedownWidget},
     }
+
+    inlines = [
+        ImageInline,
+    ]
 
 
 class CategoryAdmin(admin.ModelAdmin):
