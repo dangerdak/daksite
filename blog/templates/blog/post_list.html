@@ -8,7 +8,7 @@
 		{% for post in post_list %}
 		<div class="stub">
 				<h2>{{ post.title }}</h2>
-				{{ post.body|markdown }}
+				{{ post.body|markdown:"trusted" }}
 		</div>
 		{% endfor %}
 {% endblock content %}
