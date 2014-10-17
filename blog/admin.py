@@ -37,6 +37,15 @@ class PostAdmin(admin.ModelAdmin):
                          'classes': ['collapse']}),
     ]
 
+    class Media:
+        css = {
+            'all': ('blog/blog_form.css',),
+        }
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'blog/blog_form.js',
+        )
+
 
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
