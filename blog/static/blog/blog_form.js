@@ -6,7 +6,7 @@ function pasteHTML(event) {
 }
 
 $(window).load(function() {
-	var images = $(".image-preview");
+	var images = $(".image-preview img");
 		$(images).each(function() {
 			$(this).on("click", pasteHTML);
 		});
