@@ -48,6 +48,7 @@ INSTALLED_APPS = (
 
     # My apps
     'blog',
+    'projects',
 
     # Third party apps
     'debug_toolbar.apps.DebugToolbarConfig',

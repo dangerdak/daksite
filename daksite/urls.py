@@ -10,6 +10,9 @@ urlpatterns = patterns('',
         PostListView.as_view(),
         name='post_list'),
 
+    url(r'^projects/',
+        include('projects.urls')),
+
     url(r'^admin/',
         include(admin.site.urls)),
 )

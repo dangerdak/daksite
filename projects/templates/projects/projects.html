@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block extrahead %}
+<link href="{% static 'projects/quiz.css' %}" rel="stylesheet">
+{% endblock extrahead %}
+{% block page_title %}projects{% endblock page_title %}
+
+{% block content %}
+<h1> Capital Cities Quiz</h1>
+	<div class ='quizArea' id='quizArea'>
+		<p>
+		<span id='questionNumber'></span>What is the capital city of <span id='country'></span>?
+		</p>
+		<form>
+			<div id='selectionArea'>
+			</div>
+			<div id='submitArea'>
+				<input type='button' value='Next' id='next'>
+				<span id="warning"></span><br>
+			</div>
+		</form>
+	</div>
+	<div class='resultsArea' id='resultsArea'>
+		<h2>Well done - you completed the quiz!</h2>
+		<p> Your score is <span id='finalScore'></span>.
+	</div>
+{% endblock content %}
+{% block extrajs %}
+<script src="{% static 'projects/quiz.js' %}"></script>
+{% endblock extrajs %}
