@@ -4,10 +4,11 @@
 		<h2>Image Previews</h2>
 		<p>Click an image to paste it's HTML to your cursor position within the text body.</p>
 		{% for image in original.image_set.all %}
-		<div class="image-preview" data-slug="{{ image.slug }}">
+		<figure class="image-preview">
 			<img src="{{ image.image.url }}" height=200><br>
-			<span class="image-path">{{ image.image.url }}</span>
-		</div>
+			<figcaption class="image-caption">{{ image.caption }}</figcaption>
+			<div style="clear: both;"></div>
+		</figure>
 		{% endfor %}
 	</div>
 {% endblock after_field_sets %}

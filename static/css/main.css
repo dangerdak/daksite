@@ -76,10 +76,43 @@ nav li a {
 
 
 /*------------------------------------*\
+    $BLOG
+\*------------------------------------*/
+.image-preview {
+	display: inline-block;
+	margin: 0.5em 1em 5em 0;
+	vertical-align: top;
+	position: relative;
+}
+
+ .image-preview img {
+	padding: 4px 4px 4px 4px;
+	border: 8px solid #dedede;
+}
+
+.image-caption {
+	padding: 0 12px;
+	font-size: 0.8em;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+
+
+
+/*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
 footer {
 	bottom: 0;
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
 	width: 100%;
 	font-size: 0.8em;
 	text-align: center;
